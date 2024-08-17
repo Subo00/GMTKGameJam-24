@@ -5,7 +5,8 @@ using UnityEngine;
 public class Field : Interactable, Master
 {
     CollectorCollider collector;
-    public ItemData data;
+    public ItemData appleData;
+    public ItemData waterData;
     public uint neededNumber = 3;
     private uint currentNumber = 0;
 
@@ -17,7 +18,7 @@ public class Field : Interactable, Master
             Debug.LogError("Collector not properly set up");
         }
 
-        collector.SetNeededItems(new List<ItemStack> { new ItemStack(data, neededNumber) });
+        collector.SetNeededItems(new List<ItemStack> { new ItemStack(appleData, neededNumber) });
         base.Start();
     }
 
@@ -38,7 +39,7 @@ public class Field : Interactable, Master
     {
         if(currentNumber < neededNumber)
         {
-            uiManager.ShowProgressOnObjedct(dropPoint, (int)currentNumber, (int)neededNumber);
+            uiManager.ShowProgressOnObjedct(dropPoint, (int)currentNumber, (int)neededNumber, currentLevel == 0 ? appleData.name : waterData.name);
 
         }else
         {
