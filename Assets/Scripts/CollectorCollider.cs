@@ -20,6 +20,10 @@ public class CollectorCollider : MonoBehaviour
     //GameObject need to have a collider attached to it 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.GetComponent<ItemPickUp>())
+        {
+            return;
+        }
         ItemData item = other.GetComponent<ItemPickUp>().item;
         if (neededItems.Count == 0 || item == null)
         {
@@ -34,8 +38,8 @@ public class CollectorCollider : MonoBehaviour
                 {
                     //if the stack is at 0 remove from list
                     neededItems.Remove(itemStack);
-                    master.ReportBool(neededItems.Count == 0);
                 }
+                master.ReportBool(neededItems.Count == 0);
                 Destroy(other.gameObject);
                 break;
             }
