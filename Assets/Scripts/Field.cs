@@ -13,6 +13,8 @@ public class Field : Interactable, Master
     PlantPrefabGetter plantPrefabGetter;
     GameObject plantGO = null;
 
+    private int currentLevel = 0;
+
     protected override void Start()
     {
         collector = GetComponentInChildren<CollectorCollider>();
@@ -33,7 +35,19 @@ public class Field : Interactable, Master
         currentNumber++;
         if(value)
         {
-            Debug.Log("LEVEL UP");
+            currentLevel++;
+            if(plantGO != null)
+            {
+                Destroy(plantGO);
+                plantGO = null;
+            }
+            Vector3 colliderPosition = collector.transform.position;
+            colliderPosition.y = 0.01f;
+            Quaternion playerRot = transform.rotation;
+
+            plantGO = Instantiate(plantPrefabGetter.getPlant(currentLevel), colliderPosition, playerRot);
+            collector.SetNeededItems(new List<ItemStack> { new ItemStack(waterData, neededNumber) });
+
         }
         else
         {
