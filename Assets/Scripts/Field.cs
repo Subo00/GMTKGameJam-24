@@ -10,6 +10,9 @@ public class Field : Interactable, Master
     public uint neededNumber = 3;
     private uint currentNumber = 0;
 
+    PlantPrefabGetter plantPrefabGetter;
+    GameObject plantGO = null;
+
     protected override void Start()
     {
         collector = GetComponentInChildren<CollectorCollider>();
@@ -19,7 +22,10 @@ public class Field : Interactable, Master
         }
 
         collector.SetNeededItems(new List<ItemStack> { new ItemStack(appleData, neededNumber) });
+        plantPrefabGetter = PlantPrefabGetter.Instance;
+
         base.Start();
+        inUse = true;
     }
 
     public void ReportBool(bool value)
