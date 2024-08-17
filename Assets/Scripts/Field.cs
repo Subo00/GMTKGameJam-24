@@ -6,7 +6,8 @@ public class Field : Interactable, Master
 {
     CollectorCollider collector;
     public ItemData data;
-    public uint stackNum = 3;
+    public uint neededNumber = 3;
+    private uint currentNumber = 0;
 
     protected override void Start()
     {
@@ -16,24 +17,32 @@ public class Field : Interactable, Master
             Debug.LogError("Collector not properly set up");
         }
 
-        collector.SetNeededItems(new List<ItemStack> { new ItemStack(data, stackNum) });
+        collector.SetNeededItems(new List<ItemStack> { new ItemStack(data, neededNumber) });
         base.Start();
     }
 
     public void ReportBool(bool value)
     {
+        currentNumber++;
         if(value)
         {
             Debug.Log("LEVEL UP");
         }
         else
         {
-            Debug.Log("NOT YET");
+            
         }
     }
 
     protected override void OnUpdate()
     {
-        
+        if(currentNumber < neededNumber)
+        {
+            uiManager.ShowProgressOnObjedct(dropPoint, (int)currentNumber, (int)neededNumber);
+
+        }else
+        {
+            CommonLogic();
+        }
     }
 }
