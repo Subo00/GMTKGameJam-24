@@ -56,4 +56,5 @@ public abstract class Interactable : MonoBehaviour, IMyUpdate
             UpdateManager.Instance.RemoveUpdatable(this);
         }
     }
+
 }

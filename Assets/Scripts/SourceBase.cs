@@ -50,9 +50,8 @@ public class SourceBase : Interactable
         }
         else if (Input.GetButtonDown("Interact"))
         {
-            MinigameManager.Instance.SetOnFinishMinigame(DropResource);
-            MinigameManager.Instance.StartMinigame(minigameType);
             inUse = true;
+            DropResource(1f);
         }
         else
         {

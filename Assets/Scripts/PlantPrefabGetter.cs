@@ -11,6 +11,8 @@ public class PlantPrefabGetter : MonoBehaviour
     public GameObject Level3Prefab;
     public GameObject Level4Prefab;
 
+    public GameObject[] grassPrefabs;
+
     private void Awake()
     {
         Instance = this; 
@@ -30,5 +32,22 @@ public class PlantPrefabGetter : MonoBehaviour
                 return Level4Prefab;
         }
         return null;
+    }
+
+    public GameObject getGrass(float percent)
+    {
+        if(percent <= 0.1f)
+        {
+            return grassPrefabs[0];
+        }else if(percent <= 0.3f)
+        {
+            return grassPrefabs[1];
+        }else if(percent <= 0.6f)
+        {  
+            return grassPrefabs[2];
+        }else
+        {
+            return grassPrefabs[3];
+        }
     }
 }

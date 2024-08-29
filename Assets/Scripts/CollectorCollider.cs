@@ -1,7 +1,7 @@
+using SmallHedge.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class CollectorCollider : MonoBehaviour
 {
@@ -40,6 +40,7 @@ public class CollectorCollider : MonoBehaviour
                     neededItems.Remove(itemStack);
                 }
                 master.ReportBool(neededItems.Count == 0);
+                SoundManager.PlaySound(SoundType.Absorb);
                 Destroy(other.gameObject);
                 break;
             }

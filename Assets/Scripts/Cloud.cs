@@ -1,3 +1,4 @@
+using SmallHedge.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -41,7 +42,6 @@ public class Cloud : MonoBehaviour
 
         foreach (var resource in resourceDrops)
         {
-            Debug.Log("plls");
 
             if (resource.dropChance < randNum) continue;
 
@@ -50,6 +50,7 @@ public class Cloud : MonoBehaviour
                 GameObject drop = Instantiate(WaterGO, dropPoint.position, Quaternion.identity);
                 Vector3 rotation = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
                 drop.GetComponent<ItemPickUp>().LaunchInDirection(rotation);
+                SoundManager.PlaySound(SoundType.DropWater);
                 Thread.Sleep(10);
             }
         }
