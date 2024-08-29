@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2284188531544218074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3915771808104801406}
+  - component: {fileID: 8984034416483749365}
+  m_Layer: 0
+  m_Name: PlantPrefabGetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3915771808104801406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284188531544218074}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -208, y: -308.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8984034416483749365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284188531544218074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a24327bf7929a499eba6628b8677de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level1Prefab: {fileID: 2092388168824359784, guid: 25c42f43736f1b542b131ae3327fe43f, type: 3}
+  Level2Prefab: {fileID: 8981907308807336027, guid: 8901a8e452228094eb91a9703ef6b3cc, type: 3}
+  Level3Prefab: {fileID: 4580241431732647205, guid: 25834c7da6ba84d4c80dab6c9cc0324b, type: 3}
+  Level4Prefab: {fileID: 2493683383784835763, guid: c5d3555f9482c9f4a826dc24fe6c6695, type: 3}
+  grassPrefabs:
+  - {fileID: 665034754191944352, guid: 49ac0fa8a6324a647b9f685d217d0cd6, type: 3}
+  - {fileID: 2675353589645786367, guid: 5f39e013729259b438a083f19344609f, type: 3}
+  - {fileID: 7646313399977705586, guid: d7935acc7b06cab468738693773cabca, type: 3}
+  - {fileID: 9081915270845424566, guid: bce9d954478bbee43941ceecf37a51d9, type: 3}

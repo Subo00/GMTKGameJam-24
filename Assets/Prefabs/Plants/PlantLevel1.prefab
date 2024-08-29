@@ -155,5 +155,8 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
     value: 1
     dropChance: 1
+  - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
+    value: 1
+    dropChance: 0.5
   interactionCooldown: 30
   minigameType: 2

@@ -105,7 +105,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 65733ee04360b054f8ce56d55642c7fd, type: 3}
 --- !u!114 &1884891341713878356
@@ -122,15 +122,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceDrops:
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
-    value: 2
+    value: 3
     dropChance: 1
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
     value: 1
-    dropChance: 0.3
+    dropChance: 0.5
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
-    value: 1
-    dropChance: 0.1
-  interactionCooldown: 120
+    value: 2
+    dropChance: 0.3
+  interactionCooldown: 60
   minigameType: 2
 --- !u!1 &5935264262135302510
 GameObject:

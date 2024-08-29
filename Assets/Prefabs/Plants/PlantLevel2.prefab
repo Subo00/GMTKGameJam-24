@@ -153,10 +153,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceDrops:
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
-    value: 1
+    value: 2
     dropChance: 1
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
     value: 1
+    dropChance: 0.5
+  - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
+    value: 1
     dropChance: 0.3
-  interactionCooldown: 60
+  interactionCooldown: 30
   minigameType: 2

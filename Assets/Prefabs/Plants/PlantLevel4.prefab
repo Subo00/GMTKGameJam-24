@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 2493683383784835763}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.030163, y: 0, z: 0.054402}
+  m_LocalScale: {x: 1.1622719, y: 1, z: 1.1383}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5280711610348791980}
@@ -105,7 +105,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9da7da74353934d45a87d23591c51c1f, type: 3}
 --- !u!114 &2419688077040700843
@@ -122,18 +122,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceDrops:
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
-    value: 2
+    value: 4
     dropChance: 1
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
     value: 1
-    dropChance: 0.3
+    dropChance: 0.5
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
     value: 2
-    dropChance: 0.1
+    dropChance: 0.3
   - item: {fileID: 11400000, guid: e4e42d27b43c0e2498effa06a893917a, type: 2}
     value: 3
-    dropChance: 0.05
-  interactionCooldown: 180
+    dropChance: 0.1
+  interactionCooldown: 90
   minigameType: 2
 --- !u!1 &7603587702263736492
 GameObject:
